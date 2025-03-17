@@ -8,10 +8,12 @@
             "email": "azat.azatch@yandex.ru"
         }
     ],
-    "require": {},
     "autoload": {
         "files": [
             "src/StringUtils.php"
         ]
+    },
+    "require-dev": {
+        "webmozart/assert": "^1.11"
     }
 }
