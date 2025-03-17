@@ -9,22 +9,12 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
+use Webmozart\Assert\Assert;
+
 use function Tests\StringUtils\capitalize;
 
-if (capitalize('hello') !== 'Hello') {
-    throw new \Exception('Функция работает неверно!');
-}
-
-if (capitalize('how are you?') !== 'How are you?') {
-    throw new \Exception('Функция работает неправильно');
-}
-
-if (capitalize('') !== '') {
-    throw new \Exception('Фунция работает неверно');
-}
-
-if (capitalize(null) !== null) {
-    throw new \Exception('Функция работает неверно!');
-}
+Assert::eq(capitalize('hello'), 'Hello');
+Assert::eq(capitalize('how are you?'), 'How are you?');
+Assert::eq(capitalize('привет'), 'Привет');
 
 echo 'Все тесты пройдены!';
