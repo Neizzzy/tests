@@ -1,0 +1,17 @@
+{
+    "name": "neizzzy/test",
+    "description": "php tests",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Neizzzy",
+            "email": "azat.azatch@yandex.ru"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "files": [
+            "src/StringUtils.php"
+        ]
+    }
+}
